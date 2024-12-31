@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2 Add to Bag challenge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="flex justify-center px-12 py-48 font-sans ">
+
+      <div class="flex gap-4 items-center">
+        <!-- Small Pictures (Thumbnails) -->
+        <div class="flex flex-col gap-2">
+          <img src="https://m.media-amazon.com/images/I/81UzWRQ0HnL._AC_SX522_.jpg" alt="Thumbnail 1" class="w-16 h-16 object-cover rounded w-24 h-24 border-2 border-blue-500 bg-grey-200 hover:ring-2 hover:ring-blue-500">
+          <img src="https://m.media-amazon.com/images/I/61DpGT5T2BL._AC_SY550_.jpg" alt="Thumbnail 2" class="w-16 h-16 object-cover rounded w-24 h-24 border-2 border-grey-500 bg-grey-200 hover:ring-2 hover:ring-blue-500">
+          <img src="https://m.media-amazon.com/images/I/51NetEMp2rL._AC_SY550_.jpg" alt="Thumbnail 3" class="w-16 h-16 object-cover rounded w-24 h-24 border-2 border-grey-500 bg-grey-200 hover:ring-2 hover:ring-blue-500">
+        </div>
+        
+
+        <div class="w-80 h-80 border-4 border-grey-500 bg-grey-200 flex items-center  justify-center ">
+            <img src="https://m.media-amazon.com/images/I/81UzWRQ0HnL._AC_SX522_.jpg" alt="BigDevSoon" class=" w-65 h-60"  loading="lazy" />   
+        </div>
+ 
+        <form class="flex-auto p-6">
+          <div class="flex flex-wrap">
+            <div class="text-lg w-full  font-bold text-red-500">
+              US creations
+            </div>
+
+            <h1 class="flex-wrap text-lg font-bold text-slate-900">
+              Legendary Whitetails Men's Non-Typical Long Sleeve T-Shirt
+            </h1>
+            <div class="text-lg w-full  font-bold text-slate-600">
+              $99.00
+            </div>
+            <div class="w-full flex-none line-through bg-red text-sm font-medium text-blue-300 mt-2">
+              $139.00
+            </div>
+          </div>
+          <div class="flex items-baseline mt-4 mb-6 pb-6 border-b border-slate-200">
+            <div class="space-x-2 flex text-sm">
+              <label>
+                <input class="sr-only peer" name="size" type="radio" value="s" checked />
+                <div class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
+                  S
+                </div>
+              </label>
+              <label>
+                <input class="sr-only peer" name="size" type="radio" value="m" />
+                <div class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
+                  M
+                </div>
+              </label>
+              <label>
+                <input class="sr-only peer" name="size" type="radio" value="l" />
+                <div class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
+                  L
+                </div>
+              </label>
+              <label>
+                <input class="sr-only peer" name="size" type="radio" value="xl" />
+                <div class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
+                  XL
+                </div>
+              </label>
+              <label>
+                <input class="sr-only peer" name="size" type="radio" value="xxl" />
+                <div class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
+                  XXL
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="flex space-x-4 mb-6 text-sm font-medium">
+            <div class="flex-auto flex space-x-4">
+              <button class="h-10 px-6 font-semibold rounded-md bg-black text-white" type="submit">
+                Buy now
+              </button>
+              <button class="h-10 px-6 font-semibold rounded-md border border-slate-200 text-slate-900" type="button">
+                Add to bag
+              </button>
+            </div>
+            <!-- <button class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border border-slate-200" type="button" aria-label="Like">
+              <svg width="20" height="20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
+              </svg>
+            </button> -->
+          </div>
+          
+        </form>    
+    </div>
+</body>
+</html>
