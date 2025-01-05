@@ -12,14 +12,14 @@
       <div class="flex gap-4 items-center">
         <!-- Small Pictures (Thumbnails) -->
         <div class="flex flex-col gap-2">
-          <img src="https://m.media-amazon.com/images/I/81UzWRQ0HnL._AC_SX522_.jpg" alt="Thumbnail 1" class="w-16 h-16 object-cover rounded w-24 h-24 border-2 border-blue-500 bg-grey-200 hover:ring-2 hover:ring-blue-500">
-          <img src="https://m.media-amazon.com/images/I/61DpGT5T2BL._AC_SY550_.jpg" alt="Thumbnail 2" class="w-16 h-16 object-cover rounded w-24 h-24 border-2 border-grey-500 bg-grey-200 hover:ring-2 hover:ring-blue-500">
-          <img src="https://m.media-amazon.com/images/I/51NetEMp2rL._AC_SY550_.jpg" alt="Thumbnail 3" class="w-16 h-16 object-cover rounded w-24 h-24 border-2 border-grey-500 bg-grey-200 hover:ring-2 hover:ring-blue-500">
+          <img src="https://m.media-amazon.com/images/I/81UzWRQ0HnL._AC_SX522_.jpg" alt="Thumbnail 1" class="w-16 h-16 object-cover rounded w-24 h-24 border-2 border-grey-500 bg-grey-200 hover:ring-2 cursor-pointer ring-2 ring-blue-500" onclick="changeImage('https:/m.media-amazon.com/images/I/81UzWRQ0HnL._AC_SX522_.jpg')">
+          <img src="https://m.media-amazon.com/images/I/61DpGT5T2BL._AC_SY550_.jpg" alt="Thumbnail 2" class="w-16 h-16 object-cover rounded w-24 h-24 border-2 border-grey-500 bg-grey-200 hover:ring-2 cursor-pointer  hover:ring-blue-500" onclick="changeImage('https://m.media-amazon.com/images/I/61DpGT5T2BL._AC_SY550_.jpg')">
+          <img src="https://m.media-amazon.com/images/I/51NetEMp2rL._AC_SY550_.jpg" alt="Thumbnail 3" class="w-16 h-16 object-cover rounded w-24 h-24 border-2 border-grey-500 bg-grey-200 hover:ring-2 cursor-pointer hover:ring-blue-500" onclick="changeImage('https://m.media-amazon.com/images/I/51NetEMp2rL._AC_SY550_.jpg')">
         </div>
         
-
+        <!-- Large Picture (Thumbnails) -->
         <div class="w-80 h-80 border-4 border-grey-500 bg-grey-200 flex items-center  justify-center ">
-            <img src="https://m.media-amazon.com/images/I/81UzWRQ0HnL._AC_SX522_.jpg" alt="BigDevSoon" class=" w-65 h-60"  loading="lazy" />   
+            <img id="largeImage" src="https://m.media-amazon.com/images/I/81UzWRQ0HnL._AC_SX522_.jpg" alt="Large Image" class=" w-65 h-60"  loading="lazy" />   
         </div>
  
         <form class="flex-auto p-6">
@@ -31,7 +31,7 @@
             <h1 class="flex-wrap text-lg font-bold text-slate-900">
               Legendary Whitetails Men's Non-Typical Long Sleeve T-Shirt
             </h1>
-            <div class="text-lg w-full  font-bold text-slate-600">
+            <div class="text-lg w-full  font-bold text-blue-500">
               $99.00
             </div>
             <div class="w-full flex-none line-through bg-red text-sm font-medium text-blue-300 mt-2">
@@ -90,5 +90,14 @@
           
         </form>    
     </div>
+
+    <script>
+      // JS fun to change the large image
+      function changeImage(imagesrc){
+        const largeImage = document.getElementById('largeImage');
+        largeImage.src = imagesrc;
+      }
+    </script>
+
 </body>
 </html>
