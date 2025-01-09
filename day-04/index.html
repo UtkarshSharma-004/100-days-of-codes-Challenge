@@ -1,40 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Our unique tag to identify the solution -->
-    <bds />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BigDevSoon Contact Us challenge</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 4 Contact Us challenge</title>
 
-    <!-- TailwindCSS for styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white">
+  <!-- <div class="flex items-center justify-center  "> -->
+    <img src="./bgimg.jpg"
+    alt="map" 
+    class="w-full h-full object-cover absolute"/>
+  
+  <div class=" relative flex flex-row items-start justify-between px-24 py-24">
+  <span class="flex flex-wrap">
+    <h1 class="flex justify-start text-white text-8xl font-bold">Contact Us</h1>
+  <p class="text-2xl  text-white mt-8 tracking-wider leading-relaxed "> Get in touch with us! Whether you have<br> questions, feedback, or just want to say<br> hello, we're here for you.</p>
+  </span>
 
-  <body
-    class="bg-gray-900 flex flex-col items-center justify-center min-h-screen"
-  >
-    <div
-      class="bg-white text-gray-800 p-8 space-y-4 shadow rounded-xl max-w-md md:max-w-lg"
-    >
-      <!-- Logo and Title -->
-      <img
-        src="https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/object/public/previews/logo-challenge-template.svg"
-        alt="BigDevSoon Logo"
-        class="w-150 mx-auto"
-      />
-      <h1 class="text-2xl font-bold text-center">Contact Us challenge</h1>
-      <!-- Challenge Introduction -->
-      <p class="text">
-        The goal is to transform the provided design screenshot into a
-        functional, complete challenge.
-      </p>
-
-      <p class="text-sm border-t pt-6">
-        <strong>Tip</strong>: This example uses TailwindCSS for styling. Feel
-        free to integrate other libraries using their CDNs to enhance your
-        challenge.
-      </p>
+  <div class=" border-2 min-w-[400px] min-h-[530px] bg-white rounded-[30px] border-gray-400 box-decoration-slice bg-white p-2 shadow ">
+    <h1 class="text-lg p-4 ">Send us a Message</h1>
+    
+    <div class="flex items-center p-3 ">
+      <button class="flex text-gray-500 bg-white  border-2 border-gray-400 w-full  rounded-xl p-1">Name</button>
     </div>
-  </body>
+    
+    <div class="flex items-center p-3 ">
+      <button class="flex text-gray-500 bg-white  border-2 border-gray-400 w-full  rounded-xl p-1 ">Email</button>
+    </div>
+    
+    <div class="flex items-center p-3 ">
+      <button class="flex text-gray-500 bg-white  border-2 border-gray-400 w-full  rounded-xl p-1">Phone</button>
+    </div>
+    
+    
+
+    <p class="flex text-gray-500 p-2">Preferred contact method of communication</p>
+
+
+    <div class="flex items-center space-x-5 p-1">
+      <label>
+        <input class="" type="radio" value="email address" />
+        <span class="text-gray-500" > Email </span>
+      </label>
+      
+      <label>
+        <input class="" type="radio" value="email address" />
+        <span class="text-gray-500 " > Phone </span>
+      </label>
+    </div>
+    
+    <div class="flex items-center p-3 ">
+      <button class="flex text-gray-500 bg-white  border-2 border-gray-400 w-full h-24 rounded-xl p-1">Message</button>
+    </div>
+
+
+    <div class="flex items-end px-3 py-8 ">
+      <button class="flex items-center justify-center text-white bg-pink-600   box-border w-full h-8 border-pink-400 rounded-xl ">Submit</button>
+    </div>
+
+  </div>
+  </div>
+  </div>
+
+</body>
 </html>
