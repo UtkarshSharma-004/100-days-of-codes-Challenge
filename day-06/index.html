@@ -1,40 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Our unique tag to identify the solution -->
-    <bds />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BigDevSoon Image Carousel challenge</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 6 Image Carousel</title>
 
-    <!-- TailwindCSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-  </head>
+</head>
+<body class="bg-black">
 
-  <body
-    class="bg-gray-900 flex flex-col items-center justify-center min-h-screen"
-  >
-    <div
-      class="bg-white text-gray-800 p-8 space-y-4 shadow rounded-xl max-w-md md:max-w-lg"
-    >
-      <!-- Logo and Title -->
-      <img
-        src="https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/object/public/previews/logo-challenge-template.svg"
-        alt="BigDevSoon Logo"
-        class="w-150 mx-auto"
-      />
-      <h1 class="text-2xl font-bold text-center">Image Carousel challenge</h1>
-      <!-- Challenge Introduction -->
-      <p class="text">
-        The goal is to transform the provided design screenshot into a
-        functional, complete challenge.
-      </p>
+  
 
-      <p class="text-sm border-t pt-6">
-        <strong>Tip</strong>: This example uses TailwindCSS for styling. Feel
-        free to integrate other libraries using their CDNs to enhance your
-        challenge.
-      </p>
-    </div>
-  </body>
+  <div class="flex flex-row justify-around items-center m-16">
+
+  <div class="flex flex-row justify-start items-center">
+   <button class="w- h- rounded-xl bg-zinc-800 hover:bg-teal-200" onclick="ChangeImage('https://img.freepik.com/premium-photo/dark-vibrant-green-fern-leaves-spreading-out-creating-swirly-natural-pattern-background_1048944-9811688.jpg')"><p class="text-4xl">🢢</p> </button>
+  </div>
+    
+    <img id="largeImage" src="https://wallpaperaccess.com/full/2332606.jpg" alt="large image" class=" w-[900px] h-[450px] " >
+  
+    <div class="flex flex-row justify-start items-center">
+      <button class="w- h- rounded-xl bg-zinc-800 hover:bg-teal-200"  onclick="ChangeImage('https://static1.thetravelimages.com/wordpress/wp-content/uploads/2023/05/resized-image-promo-84.jpeg')"><p class="text-4xl">🢣</p> </button>
+     </div>
+
+  </div>
+
+
+
+  <div class="flex flex row gap-2 ">
+    <img src="https://th.bing.com/th/id/OIP.Ze5gyClwWbGcRCPCi_1PrAAAAA?rs=1&pid=ImgDetMain" alt="small image 2" class="w-60 h-60 border-2 border-black hover:border-white" onclick="ChangeImage('https://th.bing.com/th/id/OIP.Ze5gyClwWbGcRCPCi_1PrAAAAA?rs=1&pid=ImgDetMain')"/>
+    <img src="https://img.freepik.com/premium-photo/dark-vibrant-green-fern-leaves-spreading-out-creating-swirly-natural-pattern-background_1048944-9811688.jpg" alt="small image 2" class="w-60 h-60 border-2 border-black hover:border-white" onclick="ChangeImage('https://img.freepik.com/premium-photo/dark-vibrant-green-fern-leaves-spreading-out-creating-swirly-natural-pattern-background_1048944-9811688.jpg')"/>
+    <img src="https://wallpaperaccess.com/full/2332606.jpg" alt="small image 2" class="w-60 h-60 border-2 border-black hover:border-white" onclick="ChangeImage('https://wallpaperaccess.com/full/2332606.jpg')"/>
+    <img src="https://static1.thetravelimages.com/wordpress/wp-content/uploads/2023/05/resized-image-promo-84.jpeg" alt="small image 2" class="w-60 h-60 border-2 border-black hover:border-white" onclick="ChangeImage('https://static1.thetravelimages.com/wordpress/wp-content/uploads/2023/05/resized-image-promo-84.jpeg')"/>
+    <img src="https://th.bing.com/th/id/OIP.NuOaWO9k07q_VwUYEv-ofgHaHa?w=612&h=612&rs=1&pid=ImgDetMain" alt="small image 2" class="w-60 h-60 border-2 border-black hover:border-white" onclick="ChangeImage('https://th.bing.com/th/id/OIP.NuOaWO9k07q_VwUYEv-ofgHaHa?w=612&h=612&rs=1&pid=ImgDetMain')"/>
+    <img src="https://th.bing.com/th/id/OIP.KKPbk8McISZXjoHSNj8GtwAAAA?rs=1&pid=ImgDetMain" alt="small image 2" class="w-60 h-60 border-2 border-black hover:border-white" onclick="ChangeImage('https://th.bing.com/th/id/OIP.KKPbk8McISZXjoHSNj8GtwAAAA?rs=1&pid=ImgDetMain')"/>
+    
+
+  </div>
+  
+<script>
+  //js func to change large image
+  function ChangeImage(imagesrc){
+    const largeImage = document.getElementById('largeImage');
+    largeImage.src=imagesrc; 
+  }
+</script>
+
+</body>
 </html>
