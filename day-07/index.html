@@ -63,10 +63,10 @@
       
       <div class="flex justify-between">
         <span>Password</span>
-        <span><img src="https://img.icons8.com/?size=24&id=84871&format=png" alt="password"/></span>
+        <span><img id="changeable" src="https://img.icons8.com/?size=24&id=121528&format=png" alt="password" onclick="toggle()" /></span>
       </div>
 
-    <input type="password" placeholder="Enter your password" class="font-bold text-black border-none focus:outline-none">
+    <input id="password-Input" type="password" placeholder="Enter your password" class="font-bold text-black border-none focus:outline-none" >
     </button>
 
     <span class="flex flex-row gap-2">
@@ -84,5 +84,24 @@
   alt="bg img"
   class="flex justify-between w-[750px] h-[700px]"/>
 </div>
+
+<script>
+  //js function to change the image
+  function toggle(){
+    const newimg = document.getElementById('changeable')
+    const passwordInput = document.getElementById('password-Input')
+
+    if(newimg.src.includes('https://img.icons8.com/?size=24&id=121528&format=png')){
+      newimg.src= 'https://img.icons8.com/?size=24&id=84871&format=png';
+      passwordInput.type = 'text';
+
+    }
+    else{
+      passwordInput.type = 'password';
+      newimg.src='https://img.icons8.com/?size=24&id=121528&format=png';
+    }
+     
+  }
+</script>
 </body>
 </html>
