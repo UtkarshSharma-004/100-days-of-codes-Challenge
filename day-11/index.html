@@ -1,40 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Our unique tag to identify the solution -->
-    <bds />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BigDevSoon Hotel Booking challenge</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 11 Hotel Booking</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-orange-300">
 
-    <!-- TailwindCSS for styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
+  <div class="flex justify-center items-center min-h-screen">
 
-  <body
-    class="bg-gray-900 flex flex-col items-center justify-center min-h-screen"
-  >
-    <div
-      class="bg-white text-gray-800 p-8 space-y-4 shadow rounded-xl max-w-md md:max-w-lg"
-    >
-      <!-- Logo and Title -->
-      <img
-        src="https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/object/public/previews/logo-challenge-template.svg"
-        alt="BigDevSoon Logo"
-        class="w-150 mx-auto"
-      />
-      <h1 class="text-2xl font-bold text-center">Hotel Booking challenge</h1>
-      <!-- Challenge Introduction -->
-      <p class="text">
-        The goal is to transform the provided design screenshot into a
-        functional, complete challenge.
-      </p>
+    <div class="border-2 w-[1000px] h-[550px] bg-white rounded-xl p-2 absolute">
 
-      <p class="text-sm border-t pt-6">
-        <strong>Tip</strong>: This example uses TailwindCSS for styling. Feel
-        free to integrate other libraries using their CDNs to enhance your
-        challenge.
-      </p>
+      <div class="relative">
+        <div class="flex flex-row gap-2"> 
+          <div>
+            <h1 class="text-lg p-2">Check in </h1>
+            <button class="flex items-center px-2 w-80 h-12 border-2 bg-gray-300 rounded-lg hover:ring-2 hover:ring-orange-300 shadow">
+              <input type="date" placeholder="" class=" w-80 h-10 bg-gray-300 font-medium focus:outline-none px-2">
+            </button>
+            
+            <h1 class="text-lg p-2">Check out </h1>
+            <button class="flex items-center px-2 w-80 h-12 border-2 bg-gray-300  rounded-lg hover:ring-2 hover:ring-orange-300 shadow">
+              <input type="date" placeholder="" class=" w-80 h-10 bg-gray-300 font-medium focus:outline-none px-2">
+            </button>
+            
+
+            <span class="flex flex-row gap-2 px-1 py-2">
+              <h1 class="text-lg px-1">Adults</h1>
+              <h1 class="text-lg px-28">Children</h1>
+            </span>
+
+            <span class="flex flex-row gap-12 px-1 py-2">
+              
+              <button class="flex items-center border-2 w-32 h-8 bg-gray-300 rounded-lg hover:ring-2 hover:ring-orange-300 shadow">
+                <input type="number" placeholder="1" class=" flex justify-center items-center w-28 h-6 focus:outline-none bg-gray-300 p-3 ">
+              </button>
+              
+              <button class="flex items-center border-2 w-32 h-8 bg-gray-300 rounded-lg hover:ring-2 hover:ring-orange-300 shadow">
+                <input type="number" placeholder="1" class=" flex justify-center items-center w-28 h-6 focus:outline-none bg-gray-300 p-3">
+              </button>
+
+            </span>
+
+            <span class="flex items-end py-[180px]">
+              <button class="flex justify-center items-center text-lg font-medium text-white hover:text-gray-400 border-2 border-orange-300 w-80 h-12 rounded-full bg-orange-400">
+                <a href="http://127.0.0.1:5500/day-10/index.html">Book a room</a>
+              </button>
+            </span>
+          </div>
+
+          <div class="flex flex-col">
+            <img src="https://miro.medium.com/v2/resize:fit:1200/1*BuRohGYRW-CrQDH-UWPy8A.jpeg" alt="hotel room" class=" w-[600px] h-80">
+          
+            <span class=" flex flex-row gap-1 py-8"> 
+            <img src="https://balivillasale.com/wp-content/uploads/2024/01/WhatsApp-Image-2024-01-10-at-14.03.31-1170x785.jpeg" alt="hotel room" class=" w-[200px] h-32 hover:ring-2 hover:ring-orange-500">
+            
+            <img src="https://th.bing.com/th/id/OIP.DxFygkNXDiJwT1Y77vWZQwHaE7?pid=ImgDet&w=196&h=130&c=7&dpr=1.3" alt="hotel room" class=" w-[200px] h-32 hover:ring-2 hover:ring-orange-500">
+            
+            <img src="https://cdn.shopify.com/s/files/1/0598/7555/7526/files/22_cbf39952-f622-4f49-9baf-15766b715df1_300x.jpg?v=1658739334" alt="hotel room" class=" w-[200px] h-32 hover:ring-2 hover:ring-orange-500">
+          </span>
+
+          
+          </div>
+
+        </div>
+      </div>
     </div>
-  </body>
+  </div>
+  
+</body>
 </html>
