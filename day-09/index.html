@@ -1,42 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Our unique tag to identify the solution -->
-    <bds />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BigDevSoon Password Generator challenge</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 9 Password Generator</title>
 
-    <!-- TailwindCSS for styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-purple-100 flex justify-center items-center min-h-screen">
 
-  <body
-    class="bg-gray-900 flex flex-col items-center justify-center min-h-screen"
-  >
-    <div
-      class="bg-white text-gray-800 p-8 space-y-4 shadow rounded-xl max-w-md md:max-w-lg"
-    >
-      <!-- Logo and Title -->
-      <img
-        src="https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/object/public/previews/logo-challenge-template.svg"
-        alt="BigDevSoon Logo"
-        class="w-150 mx-auto"
-      />
-      <h1 class="text-2xl font-bold text-center">
-        Password Generator challenge
-      </h1>
-      <!-- Challenge Introduction -->
-      <p class="text">
-        The goal is to transform the provided design screenshot into a
-        functional, complete challenge.
-      </p>
+  <div class= " border-2 w-[370px] h-[650px] bg-black rounded-xl p-4">
+    <h1 class="text-white text-2xl py-2" >Generate password</h1>
+  
+    <div class="flex flex-col gap-2">
+      <p class="text-gray-500 text-sm">GENERATED PASSWORD</p>
 
-      <p class="text-sm border-t pt-6">
-        <strong>Tip</strong>: This example uses TailwindCSS for styling. Feel
-        free to integrate other libraries using their CDNs to enhance your
-        challenge.
-      </p>
+      <button class="flex items-center justify-between p-2 w-65 h-12 bg-purple-950 rounded-xl"> 
+        <p class="text-white">sZBeL181NEj</p>
+
+        <span class="flex flex-row">
+          <img src="https://img.icons8.com/?size=24&id=112746&format=png" alt="copy">
+          <img src="https://img.icons8.com/?size=24&id=82866&format=png" alt="regenerate">
+        </span>
+
+      </button>
+
+      <span class="flex justify-between items-center py-4">
+        <p class="text-gray-500 text-sm">CHARACTER LENGTH: 
+
+          <div class="text-center">
+            <span id="sliderValue" class="text-purple-300 font-medium text-lg">12</span> 
+          </div> 
+
+        </p>
+      </span>
+
+      <button class="flex items-center justify-between p-2 w-65 h-12 bg-purple-950 rounded-xl"> 
+        <p class="text-purple-300 font-medium text-lg">8</p>
+
+        <span class="flex flex-row">
+          <!-- Slider -->
+          <input 
+          id="slider" 
+          type="range"
+          min="8" 
+          max="32" 
+          value="12" 
+          class="w-64 h-2 bg-gradient-to-r from-pink-500 via-purple-300 to-teal-400 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+          oninput="updateValue(this.value)"/>
+
+
+        </span>
+
+        
+        <!-- Selected Value -->
+        <div class="text-center">
+          <span id="sliderValue2" class="text-purple-300 font-medium text-lg">12</span> 
+        </div>
+ 
+
+      </button>
+
+
+      <p class="text-gray-500 text-sm p-2">SETTINGS</p>
+
+      <button class="flex items-center justify-between p-2 w-65 h-12 bg-purple-950 rounded-xl">   
+        <p class="text-white text-sm">Include lowercase letters</p> 
+        <div class="flex items-center">
+          <label class="relative inline-flex items-center cursor-pointer ">
+            <input type="checkbox" class="sr-only peer" />
+            <div class="w-10 h-5 bg-gray-300 peer-focus:ring-4  rounded-full peer peer-checked:bg-purple-400"></div>
+            <div class="absolute w-4 h-4 bg-white border border-gray-300 rounded-full shadow-md left-1 top-0.5 peer-checked:left-6 transition-all"></div>
+          </label>
+        </div>
+
+      </button>
+
+      <button class="flex items-center justify-between p-2 w-65 h-12 bg-purple-950 rounded-xl"> 
+        <p class="text-white text-sm">Include numbers</p>
+
+        <div class="flex items-center">
+          <label class="relative inline-flex items-center cursor-pointer ">
+            <input type="checkbox" class="sr-only peer" />
+            <div class="w-10 h-5 bg-gray-300 peer-focus:ring-4  rounded-full peer peer-checked:bg-purple-400"></div>
+            <div class="absolute w-4 h-4 bg-white border border-gray-300 rounded-full shadow-md left-1 top-0.5 peer-checked:left-6 transition-all"></div>
+          </label>
+        </div>
+
+      </button>
+
+      <button class="flex items-center justify-between p-2 w-65 h-12 bg-purple-950 rounded-xl"> 
+        <p class="text-white text-sm">Include symbols</p>
+
+        <div class="flex items-center">
+          <label class="relative inline-flex items-center cursor-pointer ">
+            <input type="checkbox" class="sr-only peer" />
+            <div class="w-10 h-5 bg-gray-300 peer-focus:ring-4  rounded-full peer peer-checked:bg-purple-400"></div>
+            <div class="absolute w-4 h-4 bg-white border border-gray-300 rounded-full shadow-md left-1 top-0.5 peer-checked:left-6 transition-all"></div>
+          </label>
+        </div>
+
+      </button>
+
+      <button class="flex items-center justify-between p-2 w-65 h-12 bg-purple-950 rounded-xl"> 
+        <p class="text-white text-sm">Include uppercase letters</p>
+
+        <div class="flex items-center">
+          <label class="relative inline-flex items-center cursor-pointer ">
+            <input type="checkbox" class="sr-only peer" />
+            <div class="w-10 h-5 bg-gray-300 peer-focus:ring-4  rounded-full peer peer-checked:bg-purple-400"></div>
+            <div class="absolute w-4 h-4 bg-white border border-gray-300 rounded-full shadow-md left-1 top-0.5 peer-checked:left-6 transition-all"></div>
+          </label>
+        </div>
+
+      </button>
+      
+      <span class="py-8 flex justify-center">
+        <button class="flex items-center justify-center p-2 w-[360px] h-12 bg-purple-400 rounded-lg hover:red-500 "> 
+          <p class="text-white text-sm flex justify-center">Generate Password</p>
+        </button>
+      </span>
+
     </div>
-  </body>
+
+
+    <!-- <div class="flex items-center">
+      <label class="relative inline-flex items-center cursor-pointer">
+        <input type="checkbox" class="sr-only peer" />
+        <div class="w-11 h-6 bg-gray-300 peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:bg-purple-300"></div>
+        <div class="absolute w-5 h-5 bg-white border border-gray-300 rounded-full shadow-md left-1 top-0.5 peer-checked:left-6 transition-all"></div>
+      </label>
+    </div> -->
+<!-- <div class=" flex items-center">
+  <label class="relative inline-flex items-center cursor-pointer">
+    <input type="checkbox" class="sr-only peer" />
+    <div class="w-11 h-6 bg-gray-300 peer-focus:ring-2 peer-focus:ring-blue-300  peer-checked:bg-purple-300 rounded-full"></div>
+    <div class="absolute w-5 h-5 bg-white border-gray-300 rounded-full left-1 peer-checked:left-6 transition-all"></div>
+  </label>
+
+</div> -->
+   
+  </div>
+  
+  <script>
+    // JavaScript to update the value dynamically
+    function updateValue(value) {
+      document.getElementById('sliderValue').textContent = value;
+      document.getElementById('sliderValue2').textContent = value;
+    }
+  </script>
+
+</body>
 </html>

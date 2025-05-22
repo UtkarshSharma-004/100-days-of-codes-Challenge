@@ -1,40 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Our unique tag to identify the solution -->
-    <bds />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BigDevSoon Sign Up Page challenge</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 10 Sign Up Page</title>
 
-    <!-- TailwindCSS for styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-pink-500 via-purple-300 to-teal-400">
 
-  <body
-    class="bg-gray-900 flex flex-col items-center justify-center min-h-screen"
-  >
-    <div
-      class="bg-white text-gray-800 p-8 space-y-4 shadow rounded-xl max-w-md md:max-w-lg"
-    >
-      <!-- Logo and Title -->
-      <img
-        src="https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/object/public/previews/logo-challenge-template.svg"
-        alt="BigDevSoon Logo"
-        class="w-150 mx-auto"
-      />
-      <h1 class="text-2xl font-bold text-center">Sign Up Page challenge</h1>
-      <!-- Challenge Introduction -->
-      <p class="text">
-        The goal is to transform the provided design screenshot into a
-        functional, complete challenge.
-      </p>
+  <div class="flex justify-evenly items-stretch py-32 min-h-screen">
+    <div class="flex">
+    <div class="flex justify-center flex-col gap-2 border-2 w-[350px] h-64 shadow-md rounded-[20px] bg-white p-2">
+      <h1 class="flex justify-center font-bold text-xl">Sign Up</h1>
+      <h1 class="flex justify-center text-sm font-bold">join us now! Sign up to kick-start your journey.</h1>
 
-      <p class="text-sm border-t pt-6">
-        <strong>Tip</strong>: This example uses TailwindCSS for styling. Feel
-        free to integrate other libraries using their CDNs to enhance your
-        challenge.
-      </p>
+      <button class="flex flex-row gap-2 justify-center items-center  h-12 border-2 rounded-lg font-bold">
+        <img src="https://img.icons8.com/?size=48&id=17949&format=png" alt="Google" class="w-5 h-5">
+        Sign up with Google</button>
+      
+      <button class="flex flex-row gap-2 justify-center items-center  h-12 border-2 rounded-lg font-bold text-white bg-blue-950">
+        <img src="https://img.icons8.com/?size=64&id=YbPqIO0gOrT3&format=png" alt="Email" class="w-6 h-6">
+        Sign up with Email</button>
+
+        <p class="flex justify-center">Already have an account? 
+          <a href="url" class="text-blue-500 font-bold hover:underline">Log in</a>
+        </p>
+
     </div>
-  </body>
+    </div>
+
+    <div class="flex">
+    <div class="flex justify-center flex-col gap-2 border-2 w-[390px] h-[500px] shadow-md rounded-[20px] bg-white p-2">
+      <h1 class="flex justify-center font-bold text-2xl">Sign Up</h1>
+      <h1 class="flex justify-center text-sm font-bold">join us now! Sign up to kick-start your journey.</h1>
+
+      <button class="flex items-center px-2 h-12 border-2 rounded-lg hover:ring-2 hover:ring-blue-500">
+        <input type="text" placeholder="Name" class=" w-65 h-10 font-medium focus:outline-none">
+      </button>
+      
+      <button class="flex items-center px-2 h-12 border-2 rounded-lg hover:ring-2 hover:ring-blue-500">
+        <input type="text" placeholder="Email" class=" w-65 h-10 font-medium focus:outline-none">
+      </button>
+      
+      <button class="flex items-center px-2 h-12 border-2 rounded-lg hover:ring-2 hover:ring-blue-500">
+        <input id="password-Input" type="password" placeholder="Password" class=" w-80 h-10 font-medium focus:outline-none">
+        <span><img id="changeable" src="https://img.icons8.com/?size=24&id=121528&format=png" alt="password" class="flex justify-end" onclick="toggle()" /></span>
+      </button>
+      
+      <button class="flex flex-row gap-2 justify-center items-center  h-12 border-2 rounded-lg font-bold text-white bg-blue-950">Sign up</button>
+
+        <p class="flex justify-center">Already have an account? 
+          <a href="url" class="text-blue-500 font-bold hover:underline">Log in</a>
+        </p>
+
+        
+         <p class="flex justify-center">----------------------or-----------------------</p>
+        
+      <button class="flex flex-row gap-2 justify-center items-center  h-12 border-2 rounded-lg font-bold">
+        <img src="https://img.icons8.com/?size=48&id=17949&format=png" alt="Google" class="w-5 h-5">
+        Sign up with Google</button>
+    </div>
+    </div>
+
+  </div>
+  
+<script>
+  //js toggle function for the change of the password
+  function toggle(){
+    const newimg = document.getElementById('changeable')
+    const passwordInput = document.getElementById('password-Input')
+
+    if(newimg.src.includes('https://img.icons8.com/?size=24&id=121528&format=png')){
+      newimg.src = 'https://img.icons8.com/?size=24&id=84871&format=png';
+      passwordInput.type = 'text';
+    }
+
+    else{
+      newimg.src='https://img.icons8.com/?size=24&id=121528&format=png';
+      passwordInput.type = 'password';
+    }
+  }
+</script>
+
+</body>
 </html>
